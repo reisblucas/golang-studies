@@ -60,4 +60,22 @@ func main() {
 
 	fmt.Println("pointed slice", fixedPositionBasedOnArguments)
 	fmt.Println("after change pointed slice", sliceWithNewMemoryReference)
+
+	// Internal arrays
+	fmt.Println("------Internal Arrays------")
+	sliceInternal := make([]float32, 10, 10)
+	fmt.Println(sliceInternal)
+	fmt.Println(len(sliceInternal)) // length
+	fmt.Println(cap(sliceInternal)) // capacity
+
+	sliceInternal = append(sliceInternal, 100)
+	fmt.Println(sliceInternal)
+	fmt.Println(len(sliceInternal)) // length
+	fmt.Println(cap(sliceInternal)) // capacity
+
+	sliceTest2 := make([]float32, 11, 11)
+	sliceTest2 = append(sliceTest2, 100)
+	fmt.Println(sliceTest2)
+	fmt.Println(len(sliceTest2)) // length
+	fmt.Println(cap(sliceTest2)) // capacity
 }
